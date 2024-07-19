@@ -46,8 +46,7 @@ const Footer = () => {
       <div className="flex justify-between items-center px-4 md:px-8 lg:px-32 py-3 max-sm:flex-col -mt-2.5">
         {/* 备案 */}
         <div className="flex items-center gap-3 max-sm:flex-col">
-          {renderIcp('https://beian.miit.gov.cn/#/Integrated/index', '/icp.png', process.env.SITE_ICP)}
-          {renderIcp('https://beian.mps.gov.cn/#/query/webSearch', '/gongan.png', process.env.SITE_GUAN_ICP)}
+
         </div>
         {/* 社交图标 */}
         <div className="max-sm:order-first flex items-center">
@@ -55,10 +54,6 @@ const Footer = () => {
           {renderSocial('网站统计', process.env.SITE_STATISTICS, RiBarChart2Line)}
           {/* Github */}
           {renderSocial('Github', `https://github.com/${process.env.GITHUB_USERNAME}`, RiGithubLine)}
-          {/* 微信 */}
-          {renderSocial('微信', process.env.AUTHOR_WECHAT, RiWechatLine)}
-          {/* 微信 */}
-          {renderSocial('Email', `mailto:${process.env.AUTHOR_EMAIL}`, RiMailLine)}
           {/* 博客 */}
           {renderSocial('博客', process.env.AUTHOR_BLOG, RiQuillPenLine)}
           {/* 全局设置 */}
