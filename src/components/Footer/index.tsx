@@ -7,22 +7,13 @@
  */
 import type { IconType } from 'react-icons';
 
-import { Link, Spacer, Tooltip } from '@nextui-org/react';
+import { Tooltip } from '@nextui-org/react';
 import Image from 'next/image';
 import { RiGithubLine, RiQuillPenLine, RiBarChart2Line } from 'react-icons/ri';
 
 import GlobalSetting from '@/components/GlobalSetting';
 
 const Footer = () => {
-  // 渲染备案
-  const renderIcp = (url: string, icon: string, name: string = '') => (
-    <Link href={url} color="foreground" isExternal size="sm" className="text-mode">
-      <Image src={icon} alt={name} width={16} height={16} />
-      <Spacer x={1} />
-      {name}
-    </Link>
-  );
-
   // 渲染社交图标
   const renderSocial = (tip: string, url: string = '', Icon: IconType) => (
     <Tooltip showArrow content={tip} placement="top">
