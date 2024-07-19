@@ -5,9 +5,7 @@
  * @LastEditTime: 2024-05-16 16:04:03
  * @Description: 头部布局
  */
-import { Tooltip } from '@nextui-org/react';
 import Image from 'next/image';
-import { RiGithubFill } from 'react-icons/ri';
 
 import BackTop from '@/components/BackTop';
 import RealTime from '@/components/RealTime';
@@ -32,16 +30,6 @@ export default function Header() {
       <div className="flex justify-between items-center grow-0 shrink-0">
         {/* 模式切换 */}
         <ThemeMode />
-        {/* Github */}
-        <Tooltip showArrow content="Github" placement="bottom">
-          <a
-            href={`https://github.com/${process.env.GITHUB_USERNAME}/${process.env.PROJECT_NAME}`}
-            target="_blank"
-            className="btn-icon"
-          >
-            <RiGithubFill size={24} />
-          </a>
-        </Tooltip>
         {/* 回到顶部 */}
         <BackTop />
       </div>
