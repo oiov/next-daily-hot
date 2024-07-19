@@ -9,7 +9,7 @@ import type { IconType } from 'react-icons';
 
 import { Link, Spacer, Tooltip } from '@nextui-org/react';
 import Image from 'next/image';
-import { RiGithubLine, RiQuillPenLine, RiWechatLine, RiMailLine, RiBarChart2Line } from 'react-icons/ri';
+import { RiGithubLine, RiQuillPenLine, RiBarChart2Line } from 'react-icons/ri';
 
 import GlobalSetting from '@/components/GlobalSetting';
 
@@ -45,9 +45,7 @@ const Footer = () => {
       </div>
       <div className="flex justify-between items-center px-4 md:px-8 lg:px-32 py-3 max-sm:flex-col -mt-2.5">
         {/* 备案 */}
-        <div className="flex items-center gap-3 max-sm:flex-col">
-
-        </div>
+        <div className="flex items-center gap-3 max-sm:flex-col"></div>
         {/* 社交图标 */}
         <div className="max-sm:order-first flex items-center">
           {/* 网站统计 */}
