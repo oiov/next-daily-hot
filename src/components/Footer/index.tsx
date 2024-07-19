@@ -5,23 +5,11 @@
  * @LastEditTime: 2024-05-27 18:16:07
  * @Description: 底部版权信息
  */
-import type { IconType } from 'react-icons';
-
-import { Tooltip } from '@nextui-org/react';
 import Image from 'next/image';
-import { RiGithubLine, RiQuillPenLine, RiBarChart2Line } from 'react-icons/ri';
 
 import GlobalSetting from '@/components/GlobalSetting';
 
 const Footer = () => {
-  // 渲染社交图标
-  const renderSocial = (tip: string, url: string = '', Icon: IconType) => (
-    <Tooltip showArrow content={tip} placement="top">
-      <a href={url} target="_blank" className="btn-icon">
-        <Icon size={20} />
-      </a>
-    </Tooltip>
-  );
   return (
     <footer className="w-full">
       {/* 顶部分割线 */}
@@ -39,12 +27,6 @@ const Footer = () => {
         <div className="flex items-center gap-3 max-sm:flex-col"></div>
         {/* 社交图标 */}
         <div className="max-sm:order-first flex items-center">
-          {/* 网站统计 */}
-          {renderSocial('网站统计', process.env.SITE_STATISTICS, RiBarChart2Line)}
-          {/* Github */}
-          {renderSocial('Github', `https://github.com/${process.env.GITHUB_USERNAME}`, RiGithubLine)}
-          {/* 博客 */}
-          {renderSocial('博客', process.env.AUTHOR_BLOG, RiQuillPenLine)}
           {/* 全局设置 */}
           <GlobalSetting />
         </div>
